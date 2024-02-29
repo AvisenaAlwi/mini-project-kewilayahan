@@ -25,30 +25,28 @@
   </div>
 </div>
 
+{{-- <div class="col-12 col-xl-12 stretch-card"> --}}
 <div class="row">
-  {{-- <div class="col-12 col-xl-12 stretch-card"> --}}
-    <div class="row">
-        @foreach ($data_card as $card)
-            <div class="col-sm-6 col-md-4 col-lg-4 col-xl-2 grid-margin stretch-card text-white">
-                <div class="card @if( !str_contains($card['color'], '#') ) bg-{{ $card['color'] }} @endif" @if( str_contains($card['color'], '#') ) style="background-color: {{ $card['color'] }}" @endif>
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between align-items-baseline">
-                        <h6 class="card-title mb-0">{{ $card['title'] }}</h6>
+    @foreach ($data_card as $card)
+        <div class="col-sm-6 col-md-4 col-lg-4 col-xl-2 grid-margin stretch-card text-white">
+            <div class="card @if( !str_contains($card['color'], '#') ) bg-{{ $card['color'] }} @endif" @if( str_contains($card['color'], '#') ) style="background-color: {{ $card['color'] }}" @endif>
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-baseline">
+                    <h6 class="card-title mb-0">{{ $card['title'] }}</h6>
+                    </div>
+                    <div class="row">
+                    <div class="col-12">
+                        <h3 class="mb-2">{{ $card['count'] }}</h3>
+                        <div class="d-flex align-items-baseline">
                         </div>
-                        <div class="row">
-                        <div class="col-12">
-                            <h3 class="mb-2">{{ $card['count'] }}</h3>
-                            <div class="d-flex align-items-baseline">
-                            </div>
-                        </div>
-                        </div>
+                    </div>
                     </div>
                 </div>
             </div>
-        @endforeach
-    </div>
-  {{-- </div> --}}
-</div> <!-- row -->
+        </div>
+    @endforeach
+</div>
+{{-- </div> --}}
 
 <div class="row mb-5">
     <div class="col-md-6">
